@@ -1,0 +1,11 @@
+name: surya
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ./github/actions/s3-upload
+        with:
+          file: build/app.zip
+          bucket: devops-artifacts-su
+          aws-region: ap-south-1
