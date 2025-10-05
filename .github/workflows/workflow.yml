@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: ./github/actions/s3-upload
+      - uses: ./.github/actions/s3-upload
         with:
           file: build/app.zip
           bucket: devops-artifacts-su
